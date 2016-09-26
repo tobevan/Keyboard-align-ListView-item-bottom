@@ -4,14 +4,13 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.AbsListView;
 import android.widget.EditText;
 
 public class MainActivity extends Activity {
     private View commentLayer;
     private EditText comment_et;
-    private CustumListView mListView;
+    private CustomListView mListView;
     private int[] datas=new int[20];
     private myAdapter adapter;
     private View bottom;
@@ -25,12 +24,12 @@ public class MainActivity extends Activity {
         }
         commentLayer = findViewById(R.id.input_layer);
         comment_et = (EditText) findViewById(R.id.comment_et);
-        mListView = (CustumListView) findViewById(R.id.mylist);
+        mListView = (CustomListView) findViewById(R.id.mylist);
 
-        bottom = LayoutInflater.from(this).inflate(R.layout.bottom, null, false);
+        bottom = LayoutInflater.from(this).inflate(R.layout.footer, null, false);
+        mListView.addFooterView(bottom);
         adapter=new myAdapter(this, mListView,datas);
         mListView.setAdapter(adapter);
-        mListView.addFooterView(bottom);
         mListView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView absListView, int i) {
@@ -43,12 +42,6 @@ public class MainActivity extends Activity {
             }
         });
 
-    }
-
-
-    private void showInputBar() {
-        commentLayer.setVisibility(View.VISIBLE);
-        keyboardUtils.openSoftKeyboard(comment_et);
     }
 
     private void hideInputBar() {

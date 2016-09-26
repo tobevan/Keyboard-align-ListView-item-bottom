@@ -2,15 +2,13 @@ package com.qiyi.guianxiang.testlistview;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.widget.ListView;
 
 /**
  * Created by guianxiang on 16-9-26.
  */
 
-public class CustumListView extends ListView {
-    private static final String TAG = "CustumListView";
+public class CustomListView extends ListView {
 
     public void setmListener(OnResizeListener mListener) {
         this.mListener = mListener;
@@ -20,15 +18,15 @@ public class CustumListView extends ListView {
 
 
 
-    public CustumListView(Context context) {
+    public CustomListView(Context context) {
         super(context);
     }
 
-    public CustumListView(Context context, AttributeSet attrs) {
+    public CustomListView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public CustumListView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CustomListView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
@@ -36,6 +34,5 @@ public class CustumListView extends ListView {
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
         mListener.OnResize(w, h, oldw, oldh);
-
     }
 }

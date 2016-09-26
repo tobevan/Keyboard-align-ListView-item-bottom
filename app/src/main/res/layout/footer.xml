@@ -4,9 +4,9 @@
     android:layout_height="match_parent">
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="50dp"
         android:textSize="24sp"
         android:gravity="center"
-        android:text="bottom"/>
+        android:text="Footer"/>
 
 </LinearLayout>

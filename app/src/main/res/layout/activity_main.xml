@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.qiyi.guianxiang.testlistview.MyRelayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -10,9 +10,9 @@
         android:layout_height="50dp"
         android:background="#cccccc"
         android:gravity="center"
-        android:text="列表测试" />
+        android:text="Title Bar" />
 
-    <com.qiyi.guianxiang.testlistview.CustumListView
+    <com.qiyi.guianxiang.testlistview.CustomListView
         android:id="@+id/mylist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,12 +31,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:hint="请输入" />
+            android:hint="please input..." />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="0"
-            android:text="发送" />
+            android:text="send" />
     </LinearLayout>
-</com.qiyi.guianxiang.testlistview.MyRelayout>
+</RelativeLayout>
