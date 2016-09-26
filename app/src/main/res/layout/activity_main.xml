@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qiyi.guianxiang.testlistview.MyRelayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#cccccc"
+        android:gravity="center"
+        android:text="列表测试" />
+
+    <com.qiyi.guianxiang.testlistview.CustumListView
+        android:id="@+id/mylist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title" />
+
+    <LinearLayout
+        android:id="@+id/input_layer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#555555"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/comment_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="请输入" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:text="发送" />
+    </LinearLayout>
+</com.qiyi.guianxiang.testlistview.MyRelayout>
